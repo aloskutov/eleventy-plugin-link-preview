@@ -9,9 +9,10 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "lint": "npx eslint ./src && npx jshint ./src"
+    "eslint": "npx eslint ./src",
+    "jshint": " npx jshint ./src"
   },
-    "keywords": [
+  "keywords": [
     "11ty",
     "11ty-plugin",
     "eleventy",
@@ -26,5 +27,9 @@
     "eslint-config-google": "^0.14.0",
     "jest": "^27.4.7",
     "jshint": "^2.13.3"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "jsdom": "^19.0.0"
   }
 }
