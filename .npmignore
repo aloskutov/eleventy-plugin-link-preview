@@ -1,0 +1,14 @@
+_site
+_includes
+.github
+coverage
+test
+.deepsource.toml
+.editorconfig
+.eslintrc.json
+.jshintrc
+.nycrc
+index.md
+.eleventyignore
+CODE_OF_CONDUCT.md
+package-lock.json

@@ -1,0 +1,30 @@
+{
+  "name": "eleventy-plugin-link-preview",
+  "version": "0.0.1",
+  "description": "Eleventy preview link plugin",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "lint": "npx eslint ./src && npx jshint ./src"
+  },
+    "keywords": [
+    "11ty",
+    "11ty-plugin",
+    "eleventy",
+    "eleventy-plugin",
+    "plugin",
+    "link-preview"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^27.4.7",
+    "jshint": "^2.13.3"
+  }
+}
