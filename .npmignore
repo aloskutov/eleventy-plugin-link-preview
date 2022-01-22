@@ -1,5 +1,3 @@
-_site
-_includes
 .github
 coverage
 test
@@ -7,8 +5,8 @@ test
 .editorconfig
 .eslintrc.json
 .jshintrc
-.nycrc
-index.md
+.jest.config.js
 .eleventyignore
 CODE_OF_CONDUCT.md
 package-lock.json
+template.html
