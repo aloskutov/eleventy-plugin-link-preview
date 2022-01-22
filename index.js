@@ -2,9 +2,13 @@
 
 const getRemotePage = require('./src/getRemotePage');
 const getPageData = require('./src/getPageData');
+const getHtml = require('./src/getHtml');
 
 const url = 'https://play.tailwindcss.com/';
 
 getRemotePage(url).then((content) => {
-  console.log(getPageData(content, url));
+  const data = getPageData(content, url);
+  if (data != {}) {
+    console.log(getHtml(data));
+  }
 });
