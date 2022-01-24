@@ -1,11 +1,11 @@
 'use strict';
 
-module.exports = (options) => {
+module.exports = () => {
   return `<style>
 .link-preview {
+  margin: 0 auto;
+  max-width: 1200px;
   padding: 0;
-  display: flex;
-  flex: 0 0 auto;
   box-shadow: inset 0 0 0 1px rgb(230 230 230);
 }
 .link-preview__link {
@@ -16,15 +16,15 @@ module.exports = (options) => {
   flex-wrap: wrap;
 }
 .link-preview__content {
-  padding: 1rem;
+  padding: 8px;
   display: flex;
   flex: 1 1 270px;
   min-width: 270px;
+  heigth: 168px;
   justify-content: center;
   flex-direction: column;
 }
 .link-preview__title {
-  display: block;
   font-weight: 600;
   line-height: 24px;
   max-height: 50px;
@@ -33,7 +33,9 @@ module.exports = (options) => {
   font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
   text-overflow: ellipsis;
   overflow: hidden;
-  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
 }
 .link-preview__description {
   margin-top: 8px;
@@ -41,11 +43,14 @@ module.exports = (options) => {
   line-height: 20px;
   font-weight: 400;
   min-width: 240px;
-  overflow: hidden;
+  max-height: 40px;
   text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
   font-size: 16px;
   font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  max-height: 40px;
 }
 .link-preview__domain {
   margin-top: 12px;
@@ -53,15 +58,15 @@ module.exports = (options) => {
 }
 .link-preview__image {
   display: block;
-  flex: 0 0 clamp(270px, (589px - 100vw)*1000, 100%);
+  padding: 0;
+  margin: 0;
+  flex: 0 0 clamp(310px, (606px - 100vw) * 1000, 100%);
+  height: clamp(168px, (606px - 100vw) * 1000, auto);
   background-position: 0% 50%;
   background-size: cover;
   background-origin: border-box;
-  height: clamp(180px, (589px - 100vw)*1000, auto);
-  aspect-ratio: 1.5;
+  aspect-ratio: 1.9;
   box-shadow: inset 0 0 0 1px rgb(230 230 230);
-  padding: 0;
-  margin: 0;
 }
 </style>`;
 };
