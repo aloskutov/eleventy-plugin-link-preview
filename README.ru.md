@@ -1,27 +1,14 @@
 # eleventy-plugin-link-preview
 
-Eleventy link preview plugin. Creates an responsive link block and, if necessary, inline css code.
+Плагин генерирует html-код виджета ссылки. При необходимости можно использовать inline css код.
 
-[Codepen preview](https://codepen.io/aloskutov/pen/GROKobB)
+[Codepen пример виджета генерируемого плагином](https://codepen.io/aloskutov/pen/GROKobB)
 
-## Usage
+## Использование
 
-### Install via npm
+### Вставка css кода
 
-```shell
-npm install @aloskutov/eleventy-plugin-link-preview
-```
-
-### Load plugin in .eleventy.js
-
-```javascript
-const linkPreview = require('@aloskutov/eleventy-plugin-link-preview');
-
-module.exports = (eleventyConfig) => {
-    eleventyConfig.addPlugin(linkPreview);
-};
-
-### Insert inline css
+Генерируется inline-css блок, который можно разместить в html-коде страницы.
 
 Nunjucks
 
@@ -41,9 +28,9 @@ Hundlebars
 {{{ linkPreviewCss }}}
 ```
 
-### Insert link
+### Вставка виджета ссылки
 
-Insert link to https://dev.to
+Для примера вставим ссылку на https://dev.to
 
 Nunjucks
 
@@ -63,7 +50,7 @@ Hundlebars
 {{{ linkPreview "https://dev.to" }}}
 ```
 
-You will get the following HTML code
+Будет сгенерирован следующий html-код:
 
 ```html
 <div class="link-preview">
@@ -80,9 +67,9 @@ You will get the following HTML code
 </div>
 ```
 
-## Custom css
+## Пользовательский css
 
-You can use your css based on below code.
+Вы можете использовать свой стиль для виджета, взяв за основу следующий css код или написать свой собственный:
 
 ```css
 .link-preview {
