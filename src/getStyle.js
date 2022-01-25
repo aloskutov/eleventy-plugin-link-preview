@@ -20,7 +20,7 @@ module.exports = () => {
   display: flex;
   flex: 1 1 270px;
   min-width: 270px;
-  heigth: 168px;
+  height: 168px;
   justify-content: center;
   flex-direction: column;
 }
