@@ -1,4 +1,5 @@
 .github
+cache
 coverage
 test
 .deepsource.toml
@@ -8,5 +9,6 @@ test
 .jest.config.js
 .eleventyignore
 CODE_OF_CONDUCT.md
+cache.json
 package-lock.json
 template.html
