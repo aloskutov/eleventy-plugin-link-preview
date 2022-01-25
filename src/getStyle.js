@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * Get inline style code
+ * @return {string} style
+ */
 module.exports = () => {
   return `<style>
 .link-preview {
