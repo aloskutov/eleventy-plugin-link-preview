@@ -6,22 +6,29 @@ const getRemotePage = require('./getRemotePage');
 const getPageData = require('./getPageData');
 const getHtml = require('./getHtml');
 
-const TTL = 1000 * 60 * 60 * 24;
+const CACHE_TTL = 1000 * 60 * 60 * 24 * 7;
 const CACHE_PATH = process.env.temp || process.env.tmp || './';
-const CACHE_FILE = CACHE_PATH + '/cache.json';
+const CACHE_FILE = CACHE_PATH + '/cache-data.json';
 
-const cache = new Cache(TTL, CACHE_FILE);
+const c = new Cache(CACHE_TTL, CACHE_FILE);
 
-module.exports = (url) => {
-  const data = cache.get(url);
+/**
+ * Link preview
+ * @param {string} url
+ * @return {string}
+ */
+const linkPreview = async (url) => {
+  const data = c.get(url);
   if (data) {
-    return getHtml(data);
-  } else {
-    getRemotePage(url).then((content) => {
-      const data = content ? getPageData(content, url) : false;
-      cache.put(url, data);
-      const result = (data && data !== {}) ? getHtml(data) : '';
-      return result;
-    });
+    return data;
   }
+  let result;
+  await getRemotePage(url).then((content) => {
+    const data = content ? getPageData(content, url) : false;
+    result = (data && data !== {}) ? getHtml(data) : '';
+    c.put(url, result);
+  });
+  return Promise.resolve(result);
 };
+
+module.exports = linkPreview;

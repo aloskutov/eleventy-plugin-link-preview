@@ -42,7 +42,8 @@ const getDomain = (domain) => {
  * @return {string}
  */
 const getImage = (image) => {
-  return image ? ` style='background-image: url(${image});'` : '';
+  return image ? `
+      <div class="link-preview__image" style="background-image: url(${image});"></div>` : '';
 };
 
 /**
@@ -58,8 +59,7 @@ const getHtml = (data = {}) => {
         <div class="link-preview__title">${getTitle(data.title)}</div>
         <div class="link-preview__description">${getDescription(data.description)}</div>
         <div class="link-preview__domain">${getDomain(data.domain)}</div>
-      </div>
-      <div class="link-preview__image"${getImage(data.image)}></div>
+      </div>${getImage(data.image)}
     </div>
   </a>
 </div>`;

@@ -1,7 +1,13 @@
 'use strict';
 
 const linkPreview = require('./src/linkPreview');
+const getStyle = require('./src/getStyle');
 
-const url = 'https://dev.to';
-
-console.log(linkPreview(url));
+module.exports = (eleventyConfig, options = {}) => {
+  eleventyConfig.addShortcode('linkPreview', async (url) => {
+    return await linkPreview(url);
+  });
+  eleventyConfig.addShortcode('linkPreviewCss', () => {
+    return getStyle();
+  });
+};
