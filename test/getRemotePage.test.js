@@ -20,7 +20,7 @@ test('Test with mock #2 Error message', async () => {
   const networkError = new Error('Some network error');
   axios.get.mockRejectedValueOnce(networkError);
 
-  let error;
+  let error = '';
 
   try {
     await getRemotePage('https://www.example.com/error1');
