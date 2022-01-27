@@ -1,6 +1,6 @@
 'use strict';
 
-const getHtml = require('../src/getHtml');
+const getHtml = require('../src/getHtml.js');
 
 test('Get html #1 empty', () => {
   const resultEmpty = `<div class="link-preview">
