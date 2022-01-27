@@ -65,10 +65,10 @@ test('Page Data', () => {
   <link rel="img_src" href="https://www.example.com/some-image.jpg">`;
 
   const result = {
-    'description': `Add to external links \"rel='noreferrer nofollow noopener external' target='_blank'\" - aloskutov/eleventy-plugin-external-links: Add to external links \"rel='noreferrer nofollow noopener external' target='_blank'\"`,
+    'description': `Add to external links "rel='noreferrer nofollow noopener external' target='_blank'" - aloskutov/eleventy-plugin-external-links: Add to external links "rel='noreferrer nofollow noopener external' target='_blank'"`,
     'domain': `github.com`,
     'image': `https://www.example.com/some-image.jpg`,
-    'title': `aloskutov/eleventy-plugin-external-links: Add to external links \"rel='noreferrer nofollow noopener external' target='_blank'\"`,
+    'title': `aloskutov/eleventy-plugin-external-links: Add to external links "rel='noreferrer nofollow noopener external' target='_blank'"`,
     'url': `https://github.com/aloskutov/eleventy-plugin-external-links`,
   };
   expect(getPageData(data)).toStrictEqual(result);
