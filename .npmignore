@@ -6,7 +6,7 @@ test
 .editorconfig
 .eslintrc.json
 .jshintrc
-.jest.config.js
+jest.config.js
 .eleventyignore
 CODE_OF_CONDUCT.md
 cache.json
