@@ -1,5 +1,9 @@
 # eleventy-plugin-link-preview
 
+[![DeepSource](https://deepsource.io/gh/aloskutov/eleventy-plugin-link-preview.svg/?label=active+issues&show_trend=true&token=MiKmciFiZJm1PqDB7dEmhZP3)](https://deepsource.io/gh/aloskutov/eleventy-plugin-link-preview/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/aloskutov/eleventy-plugin-link-preview.svg/?label=resolved+issues&show_trend=true&token=MiKmciFiZJm1PqDB7dEmhZP3)](https://deepsource.io/gh/aloskutov/eleventy-plugin-link-preview/?ref=repository-badge)
+[![DeepScan grade](https://deepscan.io/api/teams/16410/projects/20009/branches/531306/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16410&pid=20009&bid=531306)
+
 Eleventy link preview plugin. Creates an responsive link block and, if necessary, inline css code.
 
 [Codepen preview](https://codepen.io/aloskutov/pen/GROKobB)
