@@ -18,9 +18,9 @@ const c = new Cache(CACHE_TTL, CACHE_FILE);
  * @return {string}
  */
 const linkPreview = async (url) => {
-  const data = c.get(url);
-  if (data) {
-    return data;
+  const cachedData = c.get(url);
+  if (cachedData) {
+    return cachedData;
   }
   let result;
   await getRemotePage(url).then((content) => {
