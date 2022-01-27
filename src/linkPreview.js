@@ -8,7 +8,7 @@ const getHtml = require('./getHtml');
 
 const CACHE_TTL = 1000 * 60 * 60 * 24 * 7;
 const CACHE_PATH = process.env.temp || process.env.tmp || './';
-const CACHE_FILE = CACHE_PATH + '/cache-data.json';
+const CACHE_FILE = `${CACHE_PATH}/cache-data.json`;
 
 const c = new Cache(CACHE_TTL, CACHE_FILE);
 
