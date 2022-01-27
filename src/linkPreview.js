@@ -22,10 +22,9 @@ const linkPreview = async (url) => {
   if (cachedData) {
     return cachedData;
   }
-  let result;
   await getRemotePage(url).then((content) => {
     const data = content ? getPageData(content, url) : false;
-    result = (data) ? getHtml(data) : '';
+    const result = (data) ? getHtml(data) : '';
     c.put(url, result);
   });
   return Promise.resolve(result);
