@@ -17,10 +17,16 @@ test('Test with mock #1', async () => {
 });
 
 test('Test with mock #2 Error message', async () => {
-  const errorMessage = 'Network Error';
-  axios.get.mockImplementationOnce(() => Promise.
-      reject(new Error(errorMessage)));
+  const networkError = new Error('Some network error');
+  axios.get.mockRejectedValueOnce(networkError);
 
-  const data = await getRemotePage('https://www.example.com/error1');
-  expect(data).toBeFalsy();
+  let error;
+
+  try {
+    await getRemotePage('https://www.example.com/error1');
+  } catch (err) {
+    error = err;
+  }
+
+  expect(error).toEqual(networkError);
 });
