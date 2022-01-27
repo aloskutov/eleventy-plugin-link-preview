@@ -108,16 +108,15 @@ const filterData = (data) => {
  * @return {object}
  */
 const getPageData = (content, url) => {
-  if (!url) {
-    url = '';
-  }
+  const safeUrl = url ? url : '';
+
   const result = {};
   const dom = new JSDOM(content);
   const document = Object.assign(dom.window.document);
 
   result.title = getPageTitle(document);
   result.description = getPageDescription(document);
-  result.url = getPageUrl(document) ? getPageUrl(document) : url;
+  result.url = getPageUrl(document) ? getPageUrl(document) : safeUrl;
   result.image = getPageImage(document);
   result.domain = parseURL(result.url).groups.hostname ? parseURL(result.url).groups.hostname : '';
 
