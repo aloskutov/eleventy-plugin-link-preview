@@ -8,13 +8,14 @@ const axios = require('axios');
  * @return {string}
  */
 const getRemotePage = async (url) => {
-  return axios.get(url).
+  const result = await axios.get(url).
       then((response) => response.data).
       catch((error) => {
         console.log('Requested URL: ', url);
         console.log('Error: ', error.message);
         return false;
       });
+  return result;
 };
 
 module.exports = getRemotePage;
