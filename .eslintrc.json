@@ -9,21 +9,23 @@
   ],
   "ignorePatterns": ["*.config.js"],
   "rules": {
+    "camelcase": ["error"],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single", {
-      "allowTemplateLiterals": true}],
-    "semi": ["error", "always"],
-    "no-duplicate-imports": ["error"],
-    "no-self-compare": ["error"],
-    "no-use-before-define": ["error"],
-    "no-unused-vars": ["error"],
-    "camelcase": ["error"],
     "max-len": ["error", {
       "ignoreStrings": true,
       "ignoreTemplateLiterals": true,
       "ignoreRegExpLiterals": true
       }],
+    "no-confusing-arrow": ["error"],
+    "no-duplicate-imports": ["error"],
+    "no-self-compare": ["error"],
+    "no-return-await": ["error"],
+    "no-use-before-define": ["error"],
+    "no-unused-vars": ["error"],
+    "quotes": ["error", "single", {
+      "allowTemplateLiterals": true}],
+    "semi": ["error", "always"],
     "strict": "warn"
   }
 }
