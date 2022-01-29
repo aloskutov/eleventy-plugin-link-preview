@@ -1,6 +1,6 @@
 'use strict';
 
-const {JSDOM} = require('jsdom');
+const { JSDOM } = require('jsdom');
 const parseURL = require('./parseURL.js');
 
 /**

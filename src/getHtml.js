@@ -5,54 +5,42 @@
  * @param {string} url
  * @return {string}
  */
-const getUrl = (url) => {
-  return url ? url : '';
-};
+const getUrl = (url) => url ? url : '';
 
 /**
  * Get title string
  * @param {string} title
  * @return {string}
  */
-const getTitle = (title) => {
-  return title ? title : '';
-};
+const getTitle = (title) => title ? title : '';
 
 /**
  * Get description string
  * @param {string} description
  * @return {string}
  */
-const getDescription = (description) => {
-  return description ? description : '';
-};
+const getDescription = (description) => description ? description : '';
 
 /**
  * Get domain string
  * @param {string} domain
  * @return {string}
  */
-const getDomain = (domain) => {
-  return domain ? domain : '';
-};
+const getDomain = (domain) => domain ? domain : '';
 
 /**
  * Get image string
  * @param {string} image
  * @return {string}
  */
-const getImage = (image) => {
-  return image ? `
-      <div class="link-preview__image" style="background-image: url(${image});"></div>` : '';
-};
+const getImage = (image) => image ? `<div class="link-preview__image" style="background-image: url(${image});"></div>` : '';
 
 /**
  * Get html code
  * @param {object} data
  * @return {string}
  */
-const getHtml = (data = {}) => {
-  return `<div class="link-preview">
+const getHtml = (data = {}) => `<div class="link-preview">
   <a class="link-preview__link" href='${getUrl(data.url)}'>
     <div class="link-preview__wrapper">
       <div class="link-preview__content">
@@ -63,6 +51,5 @@ const getHtml = (data = {}) => {
     </div>
   </a>
 </div>`;
-};
 
 module.exports = getHtml;

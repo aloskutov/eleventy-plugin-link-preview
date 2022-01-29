@@ -1,6 +1,7 @@
 'use strict';
 
 const Cache = require('cache');
+const process = require('process');
 
 const getRemotePage = require('./getRemotePage');
 const getPageData = require('./getPageData');
