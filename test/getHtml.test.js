@@ -32,8 +32,7 @@ test('Get html #2', () => {
         <div class="link-preview__title">Some title</div>
         <div class="link-preview__description">Some title</div>
         <div class="link-preview__domain">Some title</div>
-      </div>
-      <div class="link-preview__image" style="background-image: url(https//link.to/some-image.png);"></div>
+      </div><div class="link-preview__image" style="background-image: url(https//link.to/some-image.png);"></div>
     </div>
   </a>
 </div>`;
