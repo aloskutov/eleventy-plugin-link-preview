@@ -24,6 +24,7 @@ const linkPreview = require('@aloskutov/eleventy-plugin-link-preview');
 module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(linkPreview);
 };
+```
 
 ### Insert inline css
 
