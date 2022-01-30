@@ -4,6 +4,13 @@
   "description": "Eleventy link preview plugin",
   "main": "index.js",
   "homepage": "https://github.com/aloskutov/eleventy-plugin-link-preview",
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aloskutov/eleventy-plugin-link-preview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aloskutov/eleventy-plugin-link-preview/issues"
+  },
   "directories": {
     "test": "test"
   },
@@ -16,18 +23,9 @@
     "lint": "npx eslint ./src",
     "jshint": " npx jshint ./src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aloskutov/eleventy-plugin-link-preview.git"
-  },
-  "bugs": {
-    "url": "https://github.com/aloskutov/eleventy-plugin-link-preview/issues"
-  },
   "keywords": [
     "11ty",
-    "11ty-plugin",
     "eleventy",
-    "eleventy-plugin",
     "plugin",
     "link-preview"
   ],
