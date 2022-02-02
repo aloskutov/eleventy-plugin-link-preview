@@ -49,7 +49,7 @@ Hundlebars
 
 ### Insert link
 
-Insert link to https://dev.to
+Insert link to 'https://dev.to'
 
 Nunjucks
 
