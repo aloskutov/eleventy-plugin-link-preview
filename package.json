@@ -1,10 +1,10 @@
 {
   "name": "@aloskutov/eleventy-plugin-link-preview",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Eleventy link preview plugin",
   "main": "index.js",
   "homepage": "https://github.com/aloskutov/eleventy-plugin-link-preview",
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/aloskutov/eleventy-plugin-link-preview.git"
   },
