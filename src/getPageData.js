@@ -88,11 +88,11 @@ const getPageImage = (document) => {
 };
 
 /**
- * Removes empty properties
+ * Delete empty properties
  * @param {object} data
  * @return {object}
  */
-const filterData = (data) => {
+const cleanData = (data) => {
   for (const key in data) {
     if (data[key] === '') {
       delete data[key];
@@ -120,7 +120,7 @@ const getPageData = (content, url) => {
   result.image = getPageImage(document);
   result.domain = parseURL(result.url).groups.hostname ? parseURL(result.url).groups.hostname : '';
 
-  return filterData(result);
+  return cleanData(result);
 };
 
 module.exports = getPageData;
