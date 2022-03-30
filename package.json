@@ -35,7 +35,7 @@
     "compatibility": ">=0.11"
   },
   "devDependencies": {
-    "eslint": "^8.11.0",
+    "eslint": "^8.12.0",
     "jest": "^27.5.1",
     "jshint": "^2.13.4"
   },
