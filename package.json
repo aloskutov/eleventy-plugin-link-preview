@@ -20,7 +20,7 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "lint": "npx eslint ./src",
+    "lint": "npx eslint ./src --fix",
     "jshint": " npx jshint ./src"
   },
   "keywords": [
@@ -35,7 +35,7 @@
     "compatibility": ">=0.11"
   },
   "devDependencies": {
-    "eslint": "^8.12.0",
+    "eslint": "^8.14.0",
     "jest": "^28.0.0",
     "jshint": "^2.13.4"
   },
