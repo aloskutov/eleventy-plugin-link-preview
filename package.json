@@ -42,6 +42,6 @@
   "dependencies": {
     "axios": "^0.27.0",
     "cache": "^3.0.0",
-    "jsdom": "^19.0.0"
+    "jsdom": "^20.0.0"
   }
 }
