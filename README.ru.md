@@ -6,6 +6,8 @@
 
 ## Использование
 
+Поддержка только шаблонов Nunjucks и Liquid.
+
 ### Вставка css кода
 
 Генерируется inline-css блок, который можно разместить в html-коде страницы.
@@ -22,12 +24,6 @@ Liquid
 {% linkPreviewCss %}
 ```
 
-Hundlebars
-
-```handlebars
-{{{ linkPreviewCss }}}
-```
-
 ### Вставка виджета ссылки
 
 Для примера вставим ссылку на https://dev.to
@@ -42,12 +38,6 @@ Liquid
 
 ```liquid
 {% linkPreview "https://dev.to" %}
-```
-
-Hundlebars
-
-```handlebars
-{{{ linkPreview "https://dev.to" }}}
 ```
 
 Будет сгенерирован следующий html-код:

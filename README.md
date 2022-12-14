@@ -11,6 +11,8 @@ Eleventy link preview plugin. Creates an responsive link block and, if necessary
 
 ## Usage
 
+Support for Nunjucks and Liquid templates only.
+
 ### Install via npm
 
 ```shell
@@ -41,12 +43,6 @@ Liquid
 {% linkPreviewCss %}
 ```
 
-Hundlebars
-
-```handlebars
-{{{ linkPreviewCss }}}
-```
-
 ### Insert link
 
 Insert link to 'https://dev.to'
@@ -61,12 +57,6 @@ Liquid
 
 ```liquid
 {% linkPreview "https://dev.to" %}
-```
-
-Hundlebars
-
-```handlebars
-{{{ linkPreview "https://dev.to" }}}
 ```
 
 You will get the following HTML code
