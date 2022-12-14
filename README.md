@@ -14,7 +14,7 @@ Eleventy link preview plugin. Creates an responsive link block and, if necessary
 ### Install via npm
 
 ```shell
-npm install @aloskutov/eleventy-plugin-link-preview
+npm install -D @aloskutov/eleventy-plugin-link-preview
 ```
 
 ### Load plugin in .eleventy.js
