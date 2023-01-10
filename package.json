@@ -35,13 +35,13 @@
     "compatibility": ">=0.11"
   },
   "devDependencies": {
-    "eslint": "^8.29.0",
+    "eslint": "^8.31.0",
     "jest": "^29.3.1",
     "jshint": "^2.13.6"
   },
   "dependencies": {
-    "axios": "^1.2.1",
+    "axios": "^1.2.2",
     "cache": "^3.0.0",
-    "jsdom": "^20.0.3"
+    "jsdom": "^21.0.0"
   }
 }
