@@ -3,7 +3,7 @@
 const parseURL = require('./parseURL');
 
 /**
- * hasLocalData
+ * hasCustomLink
  *
  * @param {string} url
  * @param {object} options
@@ -11,9 +11,9 @@ const parseURL = require('./parseURL');
  */
 module.exports = (url, options = {}) => {
   let result = false;
-  if (Object.hasOwn(options, 'localData') && Object.hasOwn(options.localData, url))
+  if (Object.hasOwn(options, 'customLink') && Object.hasOwn(options.customLink, url))
   {
-    result = options.localData[url];
+    result = options.customLink[url];
     result.url = url;
     result.domain = result.domain ?
       result.domain :

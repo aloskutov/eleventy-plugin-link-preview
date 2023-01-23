@@ -1,16 +1,16 @@
 'use strict';
 
-const hasLocalData = require('../src/hasLocalData');
+const hasCustomLink = require('../src/hasCustomLink');
 
-describe('hasLocalData test', () => {
+describe('hasCustomLink test', () => {
   test('Test #1. no options', () => {
     const url = 'http://www.some-url.com/';
-    expect(hasLocalData(url)).toBeFalsy();
+    expect(hasCustomLink(url)).toBeFalsy();
   });
   test('Test #2. Another url', () => {
     const url = 'http://www.some-url.com/';
     const options = {
-      localData: {
+      customLink: {
         'http://www.other-url.com/': {
           title: 'Title text',
           description: 'descriptin text',
@@ -18,12 +18,12 @@ describe('hasLocalData test', () => {
         }
       }
     };
-    expect(hasLocalData(url, options)).toBeFalsy();
+    expect(hasCustomLink(url, options)).toBeFalsy();
   });
   test('Test #3. Same url', () => {
     const url = 'http://www.some-url.com/';
     const options = {
-      localData: {
+      customLink: {
         'http://www.some-url.com/': {
           title: 'Title text',
           description: 'Description text',
@@ -38,12 +38,12 @@ describe('hasLocalData test', () => {
       image: '/path/to/image.jpg',
       domain: 'www.some-url.com',
     };
-    expect(hasLocalData(url, options)).toEqual(result);
+    expect(hasCustomLink(url, options)).toEqual(result);
   });
   test('test #4. Long url' , () => {
     const url = 'http://www.some-url.com/path/to/page/';
     const options = {
-      localData: {
+      customLink: {
         'http://www.some-url.com/path/to/page/': {
           title: 'Title text',
           description: 'Description text',
@@ -58,12 +58,12 @@ describe('hasLocalData test', () => {
       image: '/path/to/image.jpg',
       domain: 'www.some-url.com',
     };
-    expect(hasLocalData(url, options)).toEqual(result);
+    expect(hasCustomLink(url, options)).toEqual(result);
   });
   test('test #5. URL contains only relative path' , () => {
     const url = '/path/to/page/';
     const options = {
-      localData: {
+      customLink: {
         '/path/to/page/': {
           title: 'Title text',
           description: 'Description text',
@@ -79,6 +79,6 @@ describe('hasLocalData test', () => {
       image: '/path/to/image.jpg',
       domain: 'www.my-domain.com',
     };
-    expect(hasLocalData(url, options)).toEqual(result);
+    expect(hasCustomLink(url, options)).toEqual(result);
   });
 });

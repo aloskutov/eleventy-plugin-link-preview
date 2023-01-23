@@ -6,7 +6,7 @@ const process = require('process');
 const getRemotePage = require('./getRemotePage');
 const getPageData = require('./getPageData');
 const getHtml = require('./getHtml');
-const hasLocalData = require('./hasLocalData');
+const hasCustomLink = require('./hasCustomLink');
 
 const CACHE_TTL = 1000 * 60 * 60 * 24 * 7; // 1 week
 const CACHE_PATH = process.env.temp || process.env.tmp || './';
@@ -21,13 +21,13 @@ const c = new Cache(CACHE_TTL, CACHE_FILE);
  */
 const linkPreview = async (url, options = {}) => {
   let result = '';
-  const localData = hasLocalData(url, options);
+  const customLink = hasCustomLink(url, options);
   const cachedData = c.get(url);
   if (cachedData) {
     result = cachedData;
   }
-  else if (localData) {
-    result = getHtml(localData);
+  else if (customLink) {
+    result = getHtml(customLink);
   }
   else {
     await getRemotePage(url).then((content) => {
