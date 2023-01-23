@@ -77,6 +77,35 @@ You will get the following HTML code
 </div>
 ```
 
+## Using custom data for a link
+
+The data for links must be specified in the options passed to the plugin. It is also now possible to create a preview for relative links. For relative links, you can specify a domain property.
+
+To avoid confusion, try to write all links in lowercase.
+
+Links written in characters in different registers are considered different links. This can be used as a kind of hack by setting different properties for one link written in different registers. Various link previews will be generated for it.
+
+Custom link example:
+
+```js
+options = {
+    customLinks: {
+        'https://www.some-url.com': {
+            title: 'Some title',
+            description: 'Some description',
+            image: '/path/to/image.jpg',
+        },
+        '/some/relative/url': {
+            title: 'Some title for relative url',
+            description: : 'Some description for relative url',
+            image: '/path/to/some/image.jpg',
+            domain: 'www.my-domain.com'
+        }
+        ...
+    }
+}
+```
+
 ## Custom css
 
 You can use your css based on below code.
