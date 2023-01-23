@@ -85,10 +85,10 @@ To avoid confusion, try to write all links in lowercase.
 
 Links written in characters in different registers are considered different links. This can be used as a kind of hack by setting different properties for one link written in different registers. Various link previews will be generated for it.
 
-Custom link example:
+```javascript
+const linkPreview = require('@aloskutov/eleventy-plugin-link-preview');
 
-```js
-options = {
+const linkPreviewOptions = {
     customLinks: {
         'https://www.some-url.com': {
             title: 'Some title',
@@ -104,6 +104,10 @@ options = {
         ...
     }
 }
+
+module.exports = (eleventyConfig) => {
+    eleventyConfig.addPlugin(linkPreview, linkPreviewOptions);
+};
 ```
 
 ## Custom css
