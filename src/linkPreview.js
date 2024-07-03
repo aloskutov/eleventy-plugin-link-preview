@@ -11,7 +11,7 @@ const CACHE_TTL = 1000 * 60 * 60 * 24 * 7;
 const CACHE_PATH = process.env.temp || process.env.tmp || './';
 const CACHE_FILE = `${CACHE_PATH}/cache-data.json`;
 
-const c = new Cache(CACHE_TTL, CACHE_FILE);
+const cache = new Cache(CACHE_TTL, CACHE_FILE);
 
 /**
  * Link preview
@@ -19,7 +19,7 @@ const c = new Cache(CACHE_TTL, CACHE_FILE);
  * @return {string}
  */
 const linkPreview = async (url) => {
-  const cachedData = c.get(url);
+  const cachedData = cache.get(url);
   if (cachedData) {
     return cachedData;
   }
@@ -27,7 +27,7 @@ const linkPreview = async (url) => {
   await getRemotePage(url).then((content) => {
     const data = content ? getPageData(content, url) : false;
     result = (data) ? getHtml(data) : '';
-    c.put(url, result);
+    cache.put(url, result);
   });
   return Promise.resolve(result);
 };
