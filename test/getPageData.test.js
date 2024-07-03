@@ -29,11 +29,11 @@ test('Open Graph', () => {
 <meta property="og:description" content="Add to external links &amp;quot;rel=&amp;#39;noreferrer nofollow noopener external&amp;#39; target=&amp;#39;_blank&amp;#39;&amp;quot; - aloskutov/eleventy-plugin-external-links: Add to external links &amp;quot;rel=&amp;#39;norefe..." />`;
 
   const result = {
-    'description': `Add to external links &quot;rel=&#39;noreferrer nofollow noopener external&#39; target=&#39;_blank&#39;&quot; - aloskutov/eleventy-plugin-external-links: Add to external links &quot;rel=&#39;norefe...`,
-    'domain': `github.com`,
-    'image': `https://opengraph.githubassets.com/808fba54ffaaf0f81e58f3acd753c3b19d18a01da0c789c1a4c9db9165ac2947/aloskutov/eleventy-plugin-external-links`,
+    'description': 'Add to external links &quot;rel=&#39;noreferrer nofollow noopener external&#39; target=&#39;_blank&#39;&quot; - aloskutov/eleventy-plugin-external-links: Add to external links &quot;rel=&#39;norefe...',
+    'domain': 'github.com',
+    'image': 'https://opengraph.githubassets.com/808fba54ffaaf0f81e58f3acd753c3b19d18a01da0c789c1a4c9db9165ac2947/aloskutov/eleventy-plugin-external-links',
     'title': `aloskutov/eleventy-plugin-external-links: Add to external links "rel='noreferrer nofollow noopener external' target='_blank'"`,
-    'url': `https://github.com/aloskutov/eleventy-plugin-external-links`,
+    'url': 'https://github.com/aloskutov/eleventy-plugin-external-links',
   };
   expect(getPageData(data)).toStrictEqual(result);
 });
@@ -50,10 +50,10 @@ test('Open Graph: Twitter', () => {
 
   const result = {
     'description': `Add to external links &amp;quot;rel=&amp;#39;noreferrer nofollow noopener external&amp;#39; target=&amp;#39;_blank&amp;#39;&amp;quot; - aloskutov/eleventy-plugin-external-links: Add to external lin...`,
-    'domain': `github.com`,
-    'image': `https://opengraph.githubassets.com/808fba54ffaaf0f81e58f3acd753c3b19d18a01da0c789c1a4c9db9165ac2947/aloskutov/eleventy-plugin-external-links`,
+    'domain': 'github.com',
+    'image': 'https://opengraph.githubassets.com/808fba54ffaaf0f81e58f3acd753c3b19d18a01da0c789c1a4c9db9165ac2947/aloskutov/eleventy-plugin-external-links',
     'title': `aloskutov/eleventy-plugin-external-links: Add to external links "rel='noreferrer nofollow noopener external' target='_blank'"`,
-    'url': `https://github.com/aloskutov/eleventy-plugin-external-links`,
+    'url': 'https://github.com/aloskutov/eleventy-plugin-external-links',
   };
   expect(getPageData(data)).toStrictEqual(result);
 });
@@ -66,10 +66,10 @@ test('Page Data', () => {
 
   const result = {
     'description': `Add to external links "rel='noreferrer nofollow noopener external' target='_blank'" - aloskutov/eleventy-plugin-external-links: Add to external links "rel='noreferrer nofollow noopener external' target='_blank'"`,
-    'domain': `github.com`,
-    'image': `https://www.example.com/some-image.jpg`,
+    'domain': 'github.com',
+    'image': 'https://www.example.com/some-image.jpg',
     'title': `aloskutov/eleventy-plugin-external-links: Add to external links "rel='noreferrer nofollow noopener external' target='_blank'"`,
-    'url': `https://github.com/aloskutov/eleventy-plugin-external-links`,
+    'url': 'https://github.com/aloskutov/eleventy-plugin-external-links',
   };
   expect(getPageData(data)).toStrictEqual(result);
 });
